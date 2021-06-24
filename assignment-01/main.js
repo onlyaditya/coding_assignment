@@ -6,11 +6,17 @@ async function getData() {
         let res = await fetch(`http://www.omdbapi.com/?t=${title}&y=${year}&apikey=f4300b1a`);
         let data = await res.json();
 
-        append(data);
+        if (data.Response == "True") {
+            append(data);
+        }
+        else {
+            appendError();
+        }
         console.log(data);
     }
     catch (e) {
         console.log(e);
+        
     }
     
 }
@@ -34,4 +40,9 @@ function append(d) {
     lang.innerHTML = `Language: ${d.Language}`;
     rating.innerHTML = `IMDB Rating: ${d.imdbRating}`;
 
+}
+
+function appendError() {
+    let cont = document.getElementById('container');
+    cont.innerHTML = `<img src="https://cdn.dribbble.com/users/898770/screenshots/3744292/search-bar.gif" />`
 }
