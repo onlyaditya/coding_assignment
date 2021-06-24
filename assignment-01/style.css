@@ -1,0 +1,57 @@
+body {
+  background: rgb(231, 235, 235);
+}
+
+.searchbar {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(48, 6, 88);
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchbar input {
+  width: 400px;
+  margin: 5px 10px 5px 10px;
+  font-size: 20px;
+}
+
+#year {
+  width: 150px;
+}
+
+.searchbar button {
+  width: 100px;
+  margin: 5px 10px 5px 10px;
+  background-color: rgb(179, 121, 15);
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+
+.poster {
+  font-size: 25px;
+  color: green;
+}
+
+#container {
+  width: 70%;
+  margin: 20px auto;
+  display: flex;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+.details div {
+  margin: 15px;
+}
+
+#title {
+  color: red;
+}
