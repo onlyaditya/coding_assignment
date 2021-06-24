@@ -8,10 +8,16 @@ async function getData() {
 
         if (data.Response == "True") {
             append(data);
+
+            if (Number(data.imdbRating) >= 8) {
+                recommend();
+            }
         }
         else {
             appendError();
         }
+
+
         console.log(data);
     }
     catch (e) {
@@ -45,4 +51,9 @@ function append(d) {
 function appendError() {
     let cont = document.getElementById('container');
     cont.innerHTML = `<img src="https://cdn.dribbble.com/users/898770/screenshots/3744292/search-bar.gif" />`
+}
+
+function recommend() {
+    let r = document.getElementById('tag');
+    r.style.visibility = 'visible';
 }
